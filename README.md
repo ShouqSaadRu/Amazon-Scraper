@@ -48,7 +48,16 @@ This project is a two-step Amazon product scraper built using Python, `requests`
 - Saves everything in structured JSON format in `amazon_products.json`.
 
 ---
+## Setup
 
+1. Install required packages:
+
+2. Download the appropriate [ChromeDriver](https://googlechromelabs.github.io/chrome-for-testing/) for your Chrome version and place its path in the script.
+
+3. Run the scripts in order:
+- `scrape_links.py` — collects product URLs
+- `amazon_products_scraper.py` — extracts product details using Selenium
+---
 ## Why Use Selenium?
 
 Many product details (like dynamic sizes, colors, images, or reviews) are **loaded via JavaScript** after the page appears.  
