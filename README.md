@@ -1,10 +1,10 @@
-#Amazon Scraper
+# Amazon Scraper
 
 This project is a two-step Amazon product scraper built using Python, `requests`, `BeautifulSoup`, and `Selenium`. It scrapes product links from Amazon search results (like dresses), and then visits each product page to extract detailed information including item ID, title, images, colors, prices, description, sizes, and reviews including(reviewer_name, rating, comment, images, createdAt)
 
 
 
-##Features
+## Features
 
 - Scrapes Amazon result pages
 - Extracts full product page details using Selenium
@@ -20,7 +20,7 @@ This project is a two-step Amazon product scraper built using Python, `requests`
 
 ---
 
-##Technologies Used
+## Technologies Used
 
 | Tool/Library        | Purpose                                       |
 |---------------------|-----------------------------------------------|
@@ -32,15 +32,15 @@ This project is a two-step Amazon product scraper built using Python, `requests`
 
 ---
 
-##How It Works
+## How It Works
 
-###Step 1: `link_scraper.py`
+### Step 1: `link_scraper.py`
 
 - Uses `requests` and `BeautifulSoup` to crawl Amazon pages.
 - Extracts product links using HTML parsing.
 - Saves all product URLs to `amazon_links.txt`.
 
-###Step 2: `amazon_products_scraper.py`
+### Step 2: `amazon_products_scraper.py`
 
 - Loads product URLs from `amazon_links.txt`.
 - Uses `Selenium` + `ChromeDriver` to simulate a user browsing each page.
@@ -49,13 +49,13 @@ This project is a two-step Amazon product scraper built using Python, `requests`
 
 ---
 
-##Why Use Selenium?
+## Why Use Selenium?
 
 Many product details (like dynamic sizes, colors, images, or reviews) are **loaded via JavaScript** after the page appears.  
 Since `requests` can’t render JavaScript, we use **Selenium** with **ChromeDriver** to fully load and interact with the page just like a real browser.
 
 ---
 
-##Disclaimer
+## Disclaimer
 Web scraping can be a gray area and may violate the terms of service of many websites. This project is intended for educational and personal research purposes only. Please use it responsibly and be mindful of the load your requests place on the website's servers.
 
